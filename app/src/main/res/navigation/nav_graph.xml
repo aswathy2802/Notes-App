@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesListActivity">
+
+    <activity
+        android:id="@+id/notesListActivity"
+        android:name="com.techzit.mynotesapp.noteslist.NotesListActivity"
+        android:label="activity_notes_list"
+        tools:layout="@layout/activity_notes_list">
+        <action
+            android:id="@+id/action_main_to_addNote"
+            app:destination="@id/addNotesActivity" />
+        <action
+            android:id="@+id/action_main_to_editNote"
+            app:destination="@id/editNotesActivity" />
+</activity>
+
+    <activity
+        android:id="@+id/addNotesActivity"
+        android:name="com.techzit.mynotesapp.addnote.AddNotesActivity"
+        android:label="activity_add_notes"
+        tools:layout="@layout/activity_add_notes" >
+
+    </activity>
+    <activity
+        android:id="@+id/editNotesActivity"
+        android:name="com.techzit.mynotesapp.editnote.EditNotesActivity"
+        android:label="activity_edit_notes"
+        tools:layout="@layout/activity_edit_notes" />
+</navigation>
